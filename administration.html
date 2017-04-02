@@ -58,7 +58,7 @@
 	            <label>
 	              Year <span class="req">*</span>
 	            </label>
-	            <input type="text" name="Year" required autocomplete="off"/>
+	            <input type="text" name="year" required autocomplete="off"/>
 	          </div>
 	          
 	          <div class="field-wrap">
@@ -70,12 +70,29 @@
 
           </div>
 
-          <div class="field-wrap">
-          	<label>
-          		Vehicle Number (VIN) <span class="req">*</span>
-          	</label>
-          	<input type="text" name="vin" required autocomplete="off"/>
+          <div class="top-row">
+            <div class="field-wrap">
+              	<label>
+              		Vehicle Number (VIN) <span class="req">*</span>
+              	</label>
+              	<input type="text" name="vin" required autocomplete="off"/>
+              </div>
+
+              <div class="field-wrap">
+                <label>
+                  Rental Fee <span class="req"> * </span>
+                </label>
+                <input type="text" name="fee" required autocomplete="off"/>
+              </div>
           </div>
+
+            <div class="field-wrap">
+              <label>
+                Starting Odometer<span class="req">*</span>
+              </label>
+              <input type="text" name="odo" required autocomplete="off"/>
+            </div>
+
           
           <button type="submit" class="button button-block"/>Add car</button>
           
@@ -105,7 +122,7 @@
         <div id="history">   
           <h1> Look at the rental history for a specific car</h1>
           
-          <form action="./login.php" method="post">
+          <form action="./carHistory.php" method="post">
           
            <div class="field-wrap">
             <label>
@@ -143,20 +160,21 @@
         <div id="available">   
           <h1> Look for available cars from</h1>
           
-          <form action="./login.php" method="post">
+          <form action="./availableCars.php" method="post">
           
-           <div class="field-wrap">
-			  <input list="locations" name="browser">
-			  <datalist id="locations">
-			    <option value="383 Earl Street">
-			    <option value="580 Johnson Street">
-			    <option value="452 Albert Street">
-			  </datalist>
+          <div class="field-wrap">
+             <select name="location">
+                <option value="383 Earl Street">383 Earl Street</option>
+                <option value="452 Albert Street">452 Albert Street</option>
+                <option value="580 Johnson Street">580 Johnson Street</option>
+              </select>
+          </div>
 
-          </div>          
           <button class="button button-block"/>Find available cars</button>
-          
           </form>
+
+        </div>          
+        
 
         </div>
         
@@ -183,20 +201,10 @@
         <div id="other">   
           <h1> Look for cars that..</h1>
           
-          <form action="./login.php" method="post">      
+          <form action="./lastmaintenance.php" method="post">      
           	<button class="buttonOne button-block"/>Have travelled > 5000 km since last maintenance</button>
           </form>
 
-          <br> <br>
-
-          <form action="./login.php" method="post">      
-          	<button class="buttonOne button-block"/>Have highest/lowest rental rates</button>
-          </form>
-
-          <br><br>
-          <form action="./login.php" method="post">      
-          	<button class="buttonOne button-block"/>Need repairs/are damaged</button>
-          </form>
 
         </div>
       </div><!-- tab-content -->
