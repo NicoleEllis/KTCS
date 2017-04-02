@@ -226,3 +226,27 @@ textarea {
   margin-top: -20px;
   text-align: right;
 }
+
+#invoice {
+  display: none;
+}
+
+#history {
+  display: none;
+}
+
+#available {
+  display: none;
+}
+
+#reservations {
+  display: none;
+}
+
+#comments {
+  display: none;
+}
+
+#other {
+  display: none;
+}
